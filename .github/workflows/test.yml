@@ -6,11 +6,18 @@ jobs:
     steps:
       - name: Get code
         uses: action/checkout@v3
-      - name: Install nodeJS
-        uses: action/setup-node@v3
-        with:
-          node-version: 18
       - name: Install dependencies
         run: npm ci
       - name: Run ṭesṭs
         run: npm test
+  deploy=:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: action/checkout@v3
+      - name: Install dependencies
+        run: npm ci
+      - name: Building Project
+        run: npm run Build
+      - name: deploying
+        run: echo "deploying...."
