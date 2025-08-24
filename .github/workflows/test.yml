@@ -10,7 +10,7 @@ jobs:
         run: npm ci
       - name: Run ṭesṭs
         run: npm test
-  deploy=:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
