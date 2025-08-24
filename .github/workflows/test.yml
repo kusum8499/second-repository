@@ -18,6 +18,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Building Project
-        run: npm run Build
+        run: npm run build
       - name: deploying
         run: echo "deploying...."
